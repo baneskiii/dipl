@@ -38,15 +38,15 @@ const Login = () => {
       navigate("/");
     } catch (err) {
       if (!err?.originalStatus) {
-        setErrMsg("No Server Response");
+        setErrMsg("Nema serverskog odgovora.");
       } else if (err?.originalStatus === 400) {
-        setErrMsg("Missing Username or Password");
+        setErrMsg("Nedostaje korisničko ime ili lozinka.");
       } else if (err?.originalStatus === 401) {
-        setErrMsg("Unauthorized");
+        setErrMsg("Neautorizovan.");
       } else if (err?.originalStatus === 404) {
-        setErrMsg("User not found");
+        setErrMsg("Korisnik nije pronađen.");
       } else {
-        setErrMsg("Login Failed");
+        setErrMsg("Prijava neuspešna.");
       }
       setSuccessful(true);
     }
@@ -96,7 +96,7 @@ const Login = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               style={{ color: "white" }}
             >
-              Sign In
+              Prijava
             </m.h2>
             <br />
             <form onSubmit={handleSubmit}>
@@ -111,7 +111,7 @@ const Login = () => {
                   htmlFor="username"
                   className="form-label"
                 >
-                  Username
+                  Korisničko ime
                 </label>
                 <input
                   type="text"
@@ -137,7 +137,7 @@ const Login = () => {
                   htmlFor="password"
                   className="form-label"
                 >
-                  Password
+                  Lozinka
                 </label>
                 <input
                   type="password"
@@ -177,7 +177,7 @@ const Login = () => {
                 type="submit"
                 className="btn"
               >
-                Submit
+                Potvrdi
               </m.button>
             </form>
           </div>

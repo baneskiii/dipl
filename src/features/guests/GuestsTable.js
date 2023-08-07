@@ -6,9 +6,9 @@ function GuestsTable(props) {
     <table className="table border shadow">
       <thead>
         <tr>
-          <th scope="col">First name</th>
-          <th scope="col">Last name</th>
-          <th scope="col">Action</th>
+          <th scope="col">Ime</th>
+          <th scope="col">Prezime</th>
+          <th scope="col">Akcija</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +33,7 @@ function GuestsTable(props) {
                 className="btn btn-outline-warning"
                 to={`/viewGuest/${guest.id}`}
               >
-                View
+                Pregled
               </Link>
             </m.td>
           </m.tr>

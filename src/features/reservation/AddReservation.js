@@ -101,7 +101,7 @@ const AddReservation = () => {
         });
         setErrorMessage("");
         setOk(true);
-        setOkMsg("Reservation has been successfully added");
+        setOkMsg("Sistem je zapamtio rezervaciju.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/");
@@ -134,7 +134,7 @@ const AddReservation = () => {
           setItemAdded(false);
           setItemAddedMessage("");
           setSuccessfulItem(true);
-          setErrorMessageItem("Guest already added");
+          setErrorMessageItem("Gost već postoji.");
           return;
         } else {
           reservationItemsDtos.push(reservationItem);
@@ -143,7 +143,7 @@ const AddReservation = () => {
       setSuccessful(false);
       setErrorMessage("");
       setItemAdded(true);
-      setItemAddedMessage("Item added");
+      setItemAddedMessage("Stavka je dodata.");
       setItemNumber();
     } else {
       setErrorMessageItem(errorMessage);
@@ -217,7 +217,7 @@ const AddReservation = () => {
     >
       <div className="row">
         <div className="col-md-8 offset-md-2 border rounded p-4 mt-2 shadow">
-          <h4 className="text-center m-4">Add new reservation</h4>
+          <h4 className="text-center m-4">Dodavanje nove rezervacije</h4>
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
               <button
@@ -230,7 +230,7 @@ const AddReservation = () => {
                 aria-controls="home-tab-pane"
                 aria-selected="true"
               >
-                Reservation
+                Rezervacija
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -244,7 +244,7 @@ const AddReservation = () => {
                 aria-controls="profile-tab-pane"
                 aria-selected="false"
               >
-                Item
+                Stavka
               </button>
             </li>
           </ul>

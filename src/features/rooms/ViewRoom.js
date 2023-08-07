@@ -109,7 +109,7 @@ const ViewRoom = () => {
       .catch((error) => {
         if (error.status === 500) {
           setSuccessful(true);
-          setErrMsg("Room has a reservation or a room rating");
+          setErrMsg("Sistem ne može da obriše sobu. Soba ima rezervaciju ili ocenu sobe.");
         }
       });
     setDeleted(true);
@@ -131,7 +131,7 @@ const ViewRoom = () => {
         });
         setErrMsg("");
         setOk(true);
-        setOkMsg("Room has been successfully edited");
+        setOkMsg("Sistem je zapamtio sobu.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/viewRooms");
@@ -158,7 +158,7 @@ const ViewRoom = () => {
         });
         setErrMsgRating("");
         setOk(true);
-        setOkMsg("The room has been successfully rated");
+        setOkMsg("Sistem je zapamtio ocenu sobe.");
         setDisabled(true);
         setTimeout(() => {
           setHidden(!hidden);
@@ -177,7 +177,7 @@ const ViewRoom = () => {
   if (isSuccess) {
     roomTypesOptions = roomTypes.map((roomType) => (
       <option key={roomType.id} value={roomType.id}>
-        {roomType.area}m^2, {roomType.beds} beds
+        {roomType.area}m^2, {roomType.beds} kreveta
       </option>
     ));
   }
@@ -200,7 +200,7 @@ const ViewRoom = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h3 className="text-center m-4">View room</h3>
+          <h3 className="text-center m-4">Pregled sobe</h3>
           <RoomForm
             id={id}
             floor={floor}
@@ -232,7 +232,7 @@ const ViewRoom = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="col-md-6 offset-md-3 border rounded p-4 mt-4 shadow"
           >
-            <h4 className="text-center m-4">Rate room</h4>
+            <h4 className="text-center m-4">Ocena sobe</h4>
             <RoomRatingForm
               rating={rating}
               successfulRating={successfulRating}

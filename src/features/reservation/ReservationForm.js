@@ -14,13 +14,13 @@ export function ReservationForm(props) {
     <form onSubmit={submit}>
       <div className="mb-3">
         <label htmlFor="dateFrom" className="form-label">
-          Date from (e.g. 05-06-2023)
+          Datum od (npr. 05-06-2023)
         </label>
         <input
           ref={props.dateFromRef}
           type="text"
           className="form-control"
-          placeholder="Enter date from"
+          placeholder="Unesite datum od"
           name="dateFrom"
           value={props.dateFrom}
           onChange={props.onDateFromChange}
@@ -29,12 +29,12 @@ export function ReservationForm(props) {
       </div>
       <div className="mb-3">
         <label htmlFor="dateTo" className="form-label">
-          Date to (e.g. 10-06-2023)
+          Datum do (npr. 10-06-2023)
         </label>
         <input
           type="text"
           className="form-control"
-          placeholder="Enter date to"
+          placeholder="Unesite datum do"
           name="dateTo"
           value={props.dateTo}
           onChange={props.onDateToChange}
@@ -43,7 +43,7 @@ export function ReservationForm(props) {
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          Client
+          Ugovarač
         </label>
         <select
           value={props.clientId}
@@ -52,7 +52,7 @@ export function ReservationForm(props) {
           onChange={props.onClientChange}
           disabled={disabled}
         >
-          <option value={""}>Select a client</option>
+          <option value={""}>Izaberite ugovarača</option>
           {props.clientsOptions}
         </select>
       </div>
@@ -65,9 +65,9 @@ export function ReservationForm(props) {
         >
           <thead>
             <tr>
-              <th scope="col">Item number</th>
-              <th scope="col">Guest</th>
-              <th scope="col">Room number</th>
+              <th scope="col">Redni broj</th>
+              <th scope="col">Ugovarač</th>
+              <th scope="col">Broj sobe</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -96,7 +96,7 @@ export function ReservationForm(props) {
                       className="btn btn-primary mx-2"
                       onClick={() => props.editItem(i)}
                     >
-                      Edit
+                      Izmeni
                     </button>
                   ) : (
                     <button
@@ -104,7 +104,7 @@ export function ReservationForm(props) {
                       className="btn btn-danger mx-2"
                       onClick={() => props.deleteItem(i)}
                     >
-                      Delete
+                      Obriši
                     </button>
                   )}
                 </m.td>
@@ -149,7 +149,7 @@ export function ReservationForm(props) {
           className="btn btn-primary mx-1"
           disabled={disabled}
         >
-          Submit
+          Potvrdi
         </button>
         {edit ? (
           <>
@@ -158,14 +158,14 @@ export function ReservationForm(props) {
               className="btn btn-outline-primary"
               onClick={() => setDisabled(!disabled)}
             >
-              Edit
+              Izmeni
             </button>
             <button
               type="button"
               className="btn btn-danger mx-1"
               onClick={() => props.deleteReservationFun(props.id)}
             >
-              Delete
+              Obriši
             </button>
           </>
         ) : (
@@ -175,7 +175,7 @@ export function ReservationForm(props) {
           className="btn btn-outline-danger mx-1"
           to={edit ? "/viewReservations" : "/"}
         >
-          Cancel
+          Otkaži
         </Link>
       </m.div>
     </form>

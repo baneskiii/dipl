@@ -13,14 +13,14 @@ export const validateGuest = ({ firstName, lastName, birthdate, cityDto }) => {
     result = {
       canSave: false,
       errorMessage:
-        "First name, last name, birthdate must be a string and a city must be selected",
+        "Sistem ne može da zapamti gosta. Ime, prezime i datum rođenja moraju biti string i grad mora biti izabran.",
     };
     return result;
   }
   if (firstName.length < 2 || lastName.length < 2) {
     result = {
       canSave: false,
-      errorMessage: "First and last name must have at least 2 letters",
+      errorMessage: "Sistem ne može da zapamti gosta. Ime i prezime moraju imati bar 2 slova.",
     };
     return result;
   }
@@ -30,14 +30,14 @@ export const validateGuest = ({ firstName, lastName, birthdate, cityDto }) => {
   ) {
     result = {
       canSave: false,
-      errorMessage: "First and last name must have 2-15 letters",
+      errorMessage: "Sistem ne može da zapamti gosta. Ime i prezime moraju imati 2-15 slova.",
     };
     return result;
   }
   if (!/^\d{2}-\d{2}-\d{4}$/.test(birthdate)) {
     result = {
       canSave: false,
-      errorMessage: "Birthdate must be in a mentioned format",
+      errorMessage: "Sistem ne može da zapamti gosta. Datum rođenja mora biti u navedenom formatu.",
     };
     return result;
   }
@@ -55,7 +55,7 @@ export const validateGuestFilter = (firstName, lastName) => {
   ) {
     result = {
       can: false,
-      errorMessage: "First and last name can have 2-15 letters",
+      errorMessage: "Sistem ne može da nađe goste po zadatoj vrednosti. Ime i prezime moraju imati 2-15 slova.",
     };
     return result;
   }

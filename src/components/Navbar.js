@@ -56,7 +56,7 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Guests
+                  Gosti
                 </a>
                 <ul
                   className="dropdown-menu"
@@ -64,12 +64,12 @@ function Navbar() {
                 >
                   <li>
                     <Link className="dropdown-item" to={"/addGuest"}>
-                      Add guest
+                      Dodaj gosta
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/viewGuests"}>
-                      View guests
+                      Pregledaj sve goste
                     </Link>
                   </li>
                 </ul>
@@ -82,7 +82,7 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Rooms
+                  Sobe
                 </a>
                 <ul
                   className="dropdown-menu"
@@ -90,12 +90,12 @@ function Navbar() {
                 >
                   <li>
                     <Link className="dropdown-item" to={"/addRoom"}>
-                      Add room
+                      Dodaj sobu
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/viewRooms"}>
-                      View rooms
+                      Pregledaj sve sobe
                     </Link>
                   </li>
                 </ul>
@@ -108,7 +108,7 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Reservations
+                  Rezervacije
                 </a>
                 <ul
                   className="dropdown-menu"
@@ -116,12 +116,12 @@ function Navbar() {
                 >
                   <li>
                     <Link className="dropdown-item" to={"/addReservation"}>
-                      Add reservations
+                      Dodaj rezervaciju
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to={"/viewReservations"}>
-                      View reservations
+                      Pregledaj sve rezervacije
                     </Link>
                   </li>
                 </ul>
@@ -129,14 +129,14 @@ function Navbar() {
             </ul>
             {token ? (
               <>
-                <li className="nav-item d-flex">User: {name}</li>
+                <li className="nav-item d-flex">Korisnik: {name}</li>
                 <li className="nav-item d-flex">
                   <button
                     style={{ color: "rgba(213, 35, 35, 0.68)" }}
                     onClick={logout}
                     className="btn"
                   >
-                    Logout
+                    Odjava
                   </button>
                 </li>
               </>

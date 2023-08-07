@@ -14,13 +14,13 @@ function RoomForm(props) {
     <form onSubmit={submit}>
       <div className="mb-3">
         <label htmlFor="floor" className="form-label">
-          Floor
+          Sprat
         </label>
         <input
           ref={props.floorRef}
           type="text"
           className="form-control"
-          placeholder="Enter the room floor"
+          placeholder="Unesite sprat"
           name="floor"
           value={props.floor}
           onChange={props.onFloorChange}
@@ -37,12 +37,12 @@ function RoomForm(props) {
           disabled={disabled}
         />
         <label className="form-check-label" htmlFor="exampleCheck1">
-          Occupied
+          Zauzeta
         </label>
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          Room type (area, beds)
+          Vrsta sobe (površina, broj kreveta)
         </label>
         <select
           value={props.roomTypeId}
@@ -51,7 +51,7 @@ function RoomForm(props) {
           onChange={props.onRoomTypeChange}
           disabled={disabled}
         >
-          <option value={""}>Select a room type</option>
+          <option value={""}>Izaberite vrstu sobe</option>
           {props.roomTypesOptions}
         </select>
       </div>
@@ -72,7 +72,7 @@ function RoomForm(props) {
             className="text-success"
             aria-live="assertive"
           >
-            Room has been successfully deleted
+            Sistem je obrisao podatke o sobi.
           </m.p>
         ) : (
           <></>
@@ -100,7 +100,7 @@ function RoomForm(props) {
           className="btn btn-primary mx-1"
           disabled={disabled}
         >
-          Submit
+          Potvrdi
         </button>
         {edit ? (
           <>
@@ -109,7 +109,7 @@ function RoomForm(props) {
               className="btn btn-outline-primary mx-1"
               onClick={() => setDisabled(!disabled)}
             >
-              Edit
+              Izmeni
             </button>
             {!props.hideButton ? (
               <button
@@ -117,7 +117,7 @@ function RoomForm(props) {
                 className="btn btn-info mx-1"
                 onClick={() => props.setHidden(!props.hidden)}
               >
-                Rate
+                Oceni
               </button>
             ) : (
               <></>
@@ -128,7 +128,7 @@ function RoomForm(props) {
               className="btn btn-danger mx-1"
               onClick={() => props.deleteRoomFun(props.id)}
             >
-              Delete
+              Obriši
             </button>
           </>
         ) : (
@@ -138,7 +138,7 @@ function RoomForm(props) {
           className="btn btn-outline-danger mx-1"
           to={edit ? "/viewRooms" : "/"}
         >
-          Cancel
+          Otkaži
         </Link>
       </m.div>
     </form>

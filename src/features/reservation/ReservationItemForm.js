@@ -3,7 +3,7 @@ export function ReservationItemForm(props) {
     <form onSubmit={props.onSubmitItem}>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          Guest
+          Gost
         </label>
         <select
           value={props.guestId}
@@ -11,13 +11,13 @@ export function ReservationItemForm(props) {
           id="inputGroupSelect01"
           onChange={props.onGuestChange}
         >
-          <option value={""}>Select a guest</option>
+          <option value={""}>Izaberite gosta</option>
           {props.guestsOptions}
         </select>
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          Room
+          Soba
         </label>
         <select
           value={props.roomId}
@@ -25,7 +25,7 @@ export function ReservationItemForm(props) {
           id="inputGroupSelect01"
           onChange={props.onRoomChange}
         >
-          <option value={""}>Select a room</option>
+          <option value={""}>Izaberite sobu</option>
           {props.roomsOptions}
         </select>
       </div>
@@ -47,11 +47,11 @@ export function ReservationItemForm(props) {
       </div>
       {props.edit ? (
         <button type="submit" className="btn btn-primary">
-          Edit
+          Izmeni
         </button>
       ) : (
         <button type="submit" className="btn btn-primary">
-          Add
+          Dodaj
         </button>
       )}
     </form>

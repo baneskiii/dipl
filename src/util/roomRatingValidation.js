@@ -12,14 +12,14 @@ export const validateRating = ({ rating, guestDto, roomDto }) => {
   ) {
     result = {
       canSave: false,
-      errorMessage: "Rating, guest and room must be entered",
+      errorMessage: "Sistem ne može da zapamti ocenu sobe. Ocena, gost i soba moraju biti uneti.",
     };
     return result;
   }
   if (Number.parseInt(rating) < 1 || Number.parseInt(rating) > 5) {
     result = {
       canSave: false,
-      errorMessage: "Rating must be between 1 and 5",
+      errorMessage: "Sistem ne može da zapamti ocenu sobe. Ocena mora biti u opsegu od 1 do 5.",
     };
     return result;
   }

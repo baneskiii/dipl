@@ -18,10 +18,9 @@ function Home() {
             padding: 2 + "rem",
           }}
         >
-          <h1>Welcome to the hotel!</h1>
+          <h1>Dobrodošli u hotel!</h1>
           <p>
-            You can book guests, rooms and reservations and review and edit all
-            of the information needed.
+          Možete unositi goste, sobe i rezervacije i pregledati i izmeniti sve potrebne informacije.
           </p>
         </div>
       </m.div>
@@ -139,7 +138,7 @@ function Home() {
             height: 5 + "rem",
           }}
         >
-          <h4>Enjoy your stay and have a great time!</h4>
+          <h4>Uživajte u boravku i lepo se provedite!</h4>
         </div>
       </m.div>
     </div>

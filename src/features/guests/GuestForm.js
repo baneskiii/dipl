@@ -14,13 +14,13 @@ function GuestForm(props) {
     <form onSubmit={submit}>
       <div className="mb-3">
         <label htmlFor="firstName" className="form-label">
-          First name
+          Ime
         </label>
         <input
           ref={props.firstNameRef}
           type={"text"}
           className="form-control"
-          placeholder="Enter the first name"
+          placeholder="Unesite ime"
           name="firstName"
           value={props.firstName}
           onChange={props.onFirstNameChange}
@@ -29,12 +29,12 @@ function GuestForm(props) {
       </div>
       <div className="mb-3">
         <label htmlFor="lastName" className="form-label">
-          Last name
+          Prezime
         </label>
         <input
           type={"text"}
           className="form-control"
-          placeholder="Enter your last name"
+          placeholder="Unesite prezime"
           name="lastName"
           value={props.lastName}
           onChange={props.onLastNameChange}
@@ -43,12 +43,12 @@ function GuestForm(props) {
       </div>
       <div className="mb-3">
         <label htmlFor="birthdate" className="form-label">
-          Birthdate (e.g. 05-06-2023)
+          Datum rođenja (npr. 05-06-2023)
         </label>
         <input
           type={"text"}
           className="form-control"
-          placeholder="Enter your birthdate"
+          placeholder="Unesite datum rođenja"
           name="birthdate"
           value={props.birthdate}
           onChange={props.onBirthdateChange}
@@ -57,7 +57,7 @@ function GuestForm(props) {
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          City
+          Grad
         </label>
         <select
           value={props.cityId}
@@ -66,7 +66,7 @@ function GuestForm(props) {
           onChange={props.onCityChange}
           disabled={disabled}
         >
-          <option value={""}>Select a city</option>
+          <option value={""}>Izaberite grad</option>
           {props.citiesOptions}
         </select>
       </div>
@@ -87,7 +87,7 @@ function GuestForm(props) {
             className="text-success"
             aria-live="assertive"
           >
-            Guest has been successfully deleted
+            Sistem je obrisao podatke o gostu.
           </m.p>
         ) : (
           <></>
@@ -115,7 +115,7 @@ function GuestForm(props) {
           className="btn btn-primary mx-1"
           disabled={disabled}
         >
-          Submit
+          Potvrdi
         </button>
         {edit ? (
           <>
@@ -124,14 +124,14 @@ function GuestForm(props) {
               className="btn btn-outline-primary"
               onClick={() => setDisabled(!disabled)}
             >
-              Edit
+              Izmeni
             </button>
             <button
               type="button"
               className="btn btn-danger mx-1"
               onClick={() => props.deleteGuestFun(props.id)}
             >
-              Delete
+              Obriši
             </button>
           </>
         ) : (
@@ -142,7 +142,7 @@ function GuestForm(props) {
           className="btn btn-outline-danger mx-1"
           to={edit ? "/viewGuests" : "/"}
         >
-          Cancel
+          Otkaži
         </Link>
       </m.div>
     </form>

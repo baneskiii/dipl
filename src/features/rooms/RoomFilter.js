@@ -7,10 +7,10 @@ function RoomFilter(props) {
       transition={{ duration: 1, ease: "easeOut" }}
       className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow"
     >
-      <h4 className="text-center m-3">Search rooms</h4>
+      <h4 className="text-center m-3">Pretraživanje soba</h4>
       <div className="mb-3">
         <label htmlFor="floor" className="form-label">
-          Floor
+          Sprat
         </label>
         <input
           type="text"
@@ -29,12 +29,19 @@ function RoomFilter(props) {
         ) : (
           <></>
         )}
+        {props.found ? (
+          <p className="text-success" aria-live="assertive">
+            {props.foundMsg}
+          </p>
+        ) : (
+          <></>
+        )}
       </div>
       <button onClick={props.onSubmit} className="btn btn-primary mx-2">
-        Search
+        Pretraži
       </button>
       <button onClick={props.refresh} className="btn btn-outline-primary mx-2">
-        Clear
+        Resetuj
       </button>
     </m.div>
   );

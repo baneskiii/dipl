@@ -7,10 +7,10 @@ function GuestFilter(props) {
       transition={{ duration: 1, ease: "easeOut" }}
       className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow"
     >
-      <h4 className="text-center m-3">Search guests</h4>
+      <h4 className="text-center m-3">Pretraživanje gostiju</h4>
       <div className="mb-3">
         <label htmlFor="firstName" className="form-label">
-          First name
+          Ime
         </label>
         <input
           type={"text"}
@@ -23,7 +23,7 @@ function GuestFilter(props) {
       </div>
       <div className="mb-3">
         <label htmlFor="lastName" className="form-label">
-          Last name
+          Prezime
         </label>
         <input
           type={"text"}
@@ -51,10 +51,10 @@ function GuestFilter(props) {
         )}
       </div>
       <button onClick={props.onSubmit} className="btn btn-primary mx-2">
-        Search
+        Pretraži
       </button>
       <button onClick={props.refresh} className="btn btn-outline-primary mx-2">
-        Clear
+        Resetuj
       </button>
     </motion.div>
   );

@@ -73,7 +73,7 @@ const AddGuest = () => {
         });
         setErrMsg("");
         setOk(true);
-        setOkMsg("Guest has been successfully added");
+        setOkMsg("Sistem je zapamtio gosta.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/");
@@ -105,7 +105,7 @@ const AddGuest = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-4 shadow">
-          <h3 className="text-center m-4">Add new guest</h3>
+          <h3 className="text-center m-4">Dodavanje novog gosta</h3>
           <GuestForm
             firstName={firstName}
             lastName={lastName}

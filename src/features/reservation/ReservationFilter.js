@@ -7,10 +7,10 @@ export function ReservationFilter(props) {
       transition={{ duration: 1, ease: "easeOut" }}
       className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow"
     >
-      <h4 className="text-center m-3">Search reservations</h4>
+      <h4 className="text-center m-3">Pretraživanje rezervacija</h4>
       <div className="mb-3">
         <label htmlFor="dateFrom" className="form-label">
-          Date from (e.g. 05-06-2023)
+          Datum od (npr. 05-06-2023)
         </label>
         <input
           type="text"
@@ -31,10 +31,10 @@ export function ReservationFilter(props) {
         )}
       </div>
       <button onClick={props.onSubmit} className="btn btn-primary mx-2">
-        Search
+        Pretraži
       </button>
       <button onClick={props.refresh} className="btn btn-outline-primary mx-2">
-        Clear
+        Resetuj
       </button>
     </m.div>
   );

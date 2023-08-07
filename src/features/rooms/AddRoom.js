@@ -62,7 +62,7 @@ const AddRoom = () => {
         });
         setErrMsg("");
         setOk(true);
-        setOkMsg("Room has been successfully added");
+        setOkMsg("Sistem je zapamtio sobu.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/");
@@ -80,7 +80,7 @@ const AddRoom = () => {
   if (isSuccess) {
     roomTypesOptions = roomTypes.map((roomType) => (
       <option key={roomType.id} value={roomType.id}>
-        {roomType.area}m^2, {roomType.beds} beds
+        {roomType.area}m^2, {roomType.beds} kreveta
       </option>
     ));
   }
@@ -94,7 +94,7 @@ const AddRoom = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-4 shadow">
-          <h3 className="text-center m-4">Add new room</h3>
+          <h3 className="text-center m-4">Dodavanje nove sobe</h3>
           <RoomForm
             floor={floor}
             status={status}

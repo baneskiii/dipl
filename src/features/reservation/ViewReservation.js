@@ -106,7 +106,7 @@ const ViewReservation = () => {
   const deleteReservationFun = (id) => {
     deleteReservation({ id: id });
     setOk(true);
-    setOkMsg("Reservation has been successfully deleted");
+    setOkMsg("Sistem je obrisao podatke o rezervaciji.");
     setTimeout(() => {
       navigate("/viewReservations");
     }, 2000);
@@ -120,7 +120,7 @@ const ViewReservation = () => {
         updateReservation(reservation);
         setErrorMessage("");
         setOk(true);
-        setOkMsg("Reservation has been successfully edited");
+        setOkMsg("Sistem je zapamtio rezervaciju.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/viewReservations");
@@ -151,7 +151,7 @@ const ViewReservation = () => {
     }
     if (present && room.id == reservationItem.roomDto.id) {
       setSuccessfulItem(true);
-      setErrorMessageItem("Guest already exists");
+      setErrorMessageItem("Gost već postoji");
       setItemAdded(false);
       setItemAddedMessage("");
       return;
@@ -171,7 +171,7 @@ const ViewReservation = () => {
     setSuccessful(false);
     setErrorMessage("");
     setItemAdded(true);
-    setItemAddedMessage("Item edited");
+    setItemAddedMessage("Stavka je izmenjena.");
     setReservation({
       ...reservation,
       dateFrom: dateFrom,
@@ -232,7 +232,7 @@ const ViewReservation = () => {
     >
       <div className="row">
         <div className="col-md-8 offset-md-2 border rounded p-4 mt-2 shadow">
-          <h4 className="text-center m-4">View reservation</h4>
+          <h4 className="text-center m-4">Pregled rezervacije</h4>
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
               <button
@@ -245,7 +245,7 @@ const ViewReservation = () => {
                 aria-controls="home-tab-pane"
                 aria-selected="true"
               >
-                Reservation
+                Rezervacija
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -259,7 +259,7 @@ const ViewReservation = () => {
                 aria-controls="profile-tab-pane"
                 aria-selected="false"
               >
-                Item
+                Stavka
               </button>
             </li>
           </ul>

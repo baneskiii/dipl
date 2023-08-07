@@ -10,28 +10,28 @@ export const validateRoom = ({ floor, status, roomTypeDto }) => {
   ) {
     result = {
       canSave: false,
-      errorMessage: "Floor and room type must be selected",
+      errorMessage: "Sistem ne može da zapamti sobu. Sprat i vrsta sobe moraju biti uneti.",
     };
     return result;
   }
   if (!Number.isInteger(parseInt(floor))) {
     result = {
       canSave: false,
-      errorMessage: "Floor value must be a number",
+      errorMessage: "Sistem ne može da zapamti sobu. Sprat mora biti broj.",
     };
     return result;
   }
   if (parseInt(floor) < 0) {
     result = {
       canSave: false,
-      errorMessage: "Floor value must a 0 or a positive number smaller than 10",
+      errorMessage: "Sistem ne može da zapamti sobu. Sprat može biti 0 ili pozitivan broj manji od 10.",
     };
     return result;
   }
   if (floor.length > 1) {
     result = {
       canSave: false,
-      errorMessage: "Floor value must a 0 or a positive number smaller than 10",
+      errorMessage: "Sistem ne može da zapamti sobu. Sprat može biti 0 ili pozitivan broj manji od 10.",
     };
     return result;
   }
@@ -46,7 +46,7 @@ export const validateRoomFilter = (floor) => {
   if (floor < 0 || floor > 9) {
     result = {
       can: false,
-      errorMessage: "Floor must be a 0 or a positive number smalled than 10",
+      errorMessage: "Sistem ne može da nađe sobe po zadatoj vrednosti. Sprat može biti 0 ili pozitivan broj manji od 10.",
     };
     return result;
   }

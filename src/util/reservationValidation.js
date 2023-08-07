@@ -18,7 +18,7 @@ export const validateReservation = ({
     result = {
       canSave: false,
       errorMessage:
-        "Date from and date to must be a string, client must be selected and items list cannot be empty",
+        "Sistem ne može da zapamti rezervaciju. Datum od i datum do moraju biti string, ugovarač mora biti izabran i lista stavki ne može biti prazna.",
     };
     return result;
   }
@@ -28,7 +28,7 @@ export const validateReservation = ({
   ) {
     result = {
       canSave: false,
-      errorMessage: "Date from and date to must be in a mentioned format",
+      errorMessage: "Sistem ne može da zapamti rezervaciju. Datum od i datum do moraju biti u navedenom formatu.",
     };
     return result;
   }
@@ -48,7 +48,7 @@ export const validateReservationItem = ({ guestDto, roomDto }) => {
   ) {
     result = {
       canSave: false,
-      errorMessage: "Guest and room must be picked",
+      errorMessage: "Gost i soba moraju biti izabrani.",
     };
     return result;
   }
@@ -63,7 +63,7 @@ export const validateReservationFilter = (dateFrom) => {
   if (!/^\d{2}-\d{2}-\d{4}$/.test(dateFrom)) {
     result = {
       can: false,
-      errorMessage: "Date from must be in mentioned format",
+      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od mora biti u navedenom formatu.",
     };
     return result;
   }

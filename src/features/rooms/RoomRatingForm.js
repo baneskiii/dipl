@@ -12,13 +12,13 @@ export function RoomRatingForm(props) {
     <form onSubmit={submit}>
       <div className="mb-3">
         <label htmlFor="rating" className="form-label">
-          Rating (1-5)
+          Ocena (1-5)
         </label>
         <input
           ref={props.ratingRef}
           type="text"
           className="form-control"
-          placeholder="Enter the rating"
+          placeholder="Unesite ocenu"
           name="rating"
           value={props.rating}
           onChange={props.onRatingChange}
@@ -27,7 +27,7 @@ export function RoomRatingForm(props) {
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
-          Guest
+          Gost
         </label>
         <select
           value={props.guestId}
@@ -36,7 +36,7 @@ export function RoomRatingForm(props) {
           onChange={props.onGuestChange}
           disabled={disabled}
         >
-          <option value={""}>Select a guest</option>
+          <option value={""}>Izaberite gosta</option>
           {props.guestsOptions}
         </select>
       </div>
@@ -73,14 +73,14 @@ export function RoomRatingForm(props) {
         transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
       >
         <button type="submit" className="btn btn-primary">
-          Submit
+          Potvrdi
         </button>
         <button
           type="button"
           className="btn btn-outline-danger mx-2"
           onClick={() => props.setHidden(!props.hidden)}
         >
-          Cancel
+          Otkaži
         </button>
       </m.div>
     </form>

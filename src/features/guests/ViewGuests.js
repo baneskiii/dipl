@@ -62,7 +62,7 @@ const ViewGuests = () => {
     }
     if (guestsDataName.length > 0) {
       setFound(true);
-      setFoundMsg("Guests have been successfully found");
+      setFoundMsg("Sistem je našao goste po zadatoj vrednosti.");
     }
   };
 

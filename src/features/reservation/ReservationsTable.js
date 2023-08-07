@@ -6,9 +6,9 @@ export function ReservationsTable(props) {
     <table className="table border shadow">
       <thead>
         <tr>
-          <th scope="col">Date from</th>
-          <th scope="col">Date to</th>
-          <th scope="col">Action</th>
+          <th scope="col">Datum od</th>
+          <th scope="col">Datum do</th>
+          <th scope="col">Akcija</th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +31,7 @@ export function ReservationsTable(props) {
                 className="btn btn-outline-success mx-2"
                 to={`/viewReservation/${reservation.id}`}
               >
-                View
+                Pregled
               </Link>
             </m.td>
           </m.tr>

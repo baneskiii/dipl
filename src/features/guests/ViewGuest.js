@@ -75,7 +75,7 @@ const ViewGuest = () => {
       .catch((error) => {
         if (error.status === 500) {
           setSuccessful(true);
-          setErrMsg("Guest has a reservation or a room rating");
+          setErrMsg("Sistem ne može da obriše gosta. Gost ima rezervaciju ili ocenu sobe.");
         }
       });
     setDeleted(true);
@@ -98,7 +98,7 @@ const ViewGuest = () => {
         });
         setErrMsg("");
         setOk(true);
-        setOkMsg("Guest has been successfully edited");
+        setOkMsg("Sistem je zapamtio gosta.");
         setDisabled(true);
         setTimeout(() => {
           navigate("/viewGuests");
@@ -129,7 +129,7 @@ const ViewGuest = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-4 shadow">
-          <h3 className="text-center m-4">View guest</h3>
+          <h3 className="text-center m-4">Pregled gosta</h3>
           <GuestForm
             id={id}
             firstName={guest.firstName}

@@ -10,6 +10,8 @@ const ViewRooms = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successful, setSuccessful] = useState(false);
   const [rooms, setRooms] = useState([]);
+  const [found, setFound] = useState(false);
+  const [foundMsg, setFoundMsg] = useState("");
 
   const { data: roomsData } = useGetRoomsQuery();
 
@@ -25,6 +27,8 @@ const ViewRooms = () => {
     setFloor(e.target.value);
     setErrorMessage("");
     setSuccessful(false);
+    setFound(false);
+    setFoundMsg("");
   };
 
   const refresh = () => {
@@ -32,6 +36,8 @@ const ViewRooms = () => {
     setFloor("");
     setErrorMessage("");
     setSuccessful(false);
+    setFound(false);
+    setFoundMsg("");
   };
 
   const onSubmit = () => {
@@ -42,6 +48,10 @@ const ViewRooms = () => {
     } else {
       setErrorMessage(errorMessage);
       setSuccessful(true);
+    }
+    if (roomsDataFloor.length > 0) {
+      setFound(true)
+      setFoundMsg("Sistem je našao sobe po zadatoj vrednosti.")
     }
   };
 
@@ -55,6 +65,8 @@ const ViewRooms = () => {
         refresh={refresh}
         onSubmit={onSubmit}
         _errorMessage={errorMessage}
+        found={found}
+        foundMsg={foundMsg}
       ></RoomFilter>
       <m.div
         initial={{ x: "100%", opacity: 0 }}

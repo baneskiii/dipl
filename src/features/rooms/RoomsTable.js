@@ -6,9 +6,9 @@ export function RoomsTable(props) {
     <table className="table border shadow">
       <thead>
         <tr>
-          <th scope="col">Room number</th>
-          <th scope="col">Floor</th>
-          <th scope="col">Action</th>
+          <th scope="col">Broj sobe</th>
+          <th scope="col">Sprat</th>
+          <th scope="col">Akcija</th>
         </tr>
       </thead>
       <tbody>
@@ -27,7 +27,7 @@ export function RoomsTable(props) {
               transition={{ duration: 1, delay: i * 0.15 }}
             >
               <Link className="btn btn-success" to={`/viewRoom/${room.id}`}>
-                View
+                Pregled
               </Link>
             </m.td>
           </m.tr>
