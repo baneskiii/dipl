@@ -41,17 +41,25 @@ const ViewRooms = () => {
   };
 
   const onSubmit = () => {
-    setFloor(parseInt(floor));
-    const { can, errorMessage } = validateRoomFilter(floor);
-    if (can) {
-      setRooms(roomsDataFloor);
+    if (floor !== undefined && Number(parseInt(floor))) {
+      setFloor(parseInt(floor));
+      const { can, errorMessage } = validateRoomFilter(floor);
+      if (can) {
+        setRooms(roomsDataFloor);
+      } else {
+        setErrorMessage(errorMessage);
+        setSuccessful(true);
+      }
+      if (roomsDataFloor.length > 0) {
+        setFound(true);
+        setFoundMsg("Sistem je našao sobe po zadatoj vrednosti.");
+      } else {
+        setErrorMessage("Sistem ne može da nađe sobe po zadatoj vrednosti.");
+        setSuccessful(true);
+      }
     } else {
-      setErrorMessage(errorMessage);
+      setErrorMessage("Sprat mora biti broj.");
       setSuccessful(true);
-    }
-    if (roomsDataFloor.length > 0) {
-      setFound(true)
-      setFoundMsg("Sistem je našao sobe po zadatoj vrednosti.")
     }
   };
 

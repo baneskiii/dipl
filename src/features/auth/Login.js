@@ -167,9 +167,9 @@ const Login = () => {
               </div>
               <m.button
                 style={{
-                  backgroundColor: "rgb(0,141,247)",
+                  backgroundColor: "white",
                   borderColor: "rgb(0,141,247)",
-                  color: "white",
+                  color: "rgb(0,141,247)",
                 }}
                 initial={{ opacity: 0, x: "100%" }}
                 animate={{ opacity: 1, x: "0%" }}

@@ -20,7 +20,8 @@ function Home() {
         >
           <h1>Dobrodošli u hotel!</h1>
           <p>
-          Možete unositi goste, sobe i rezervacije i pregledati i izmeniti sve potrebne informacije.
+            Možete unositi goste, sobe i rezervacije i pregledati i izmeniti sve
+            potrebne informacije.
           </p>
         </div>
       </m.div>

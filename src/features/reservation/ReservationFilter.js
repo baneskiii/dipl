@@ -29,6 +29,13 @@ export function ReservationFilter(props) {
         ) : (
           <></>
         )}
+        {props.found ? (
+          <p className="text-success" aria-live="assertive">
+            {props.foundMsg}
+          </p>
+        ) : (
+          <></>
+        )}
       </div>
       <button onClick={props.onSubmit} className="btn btn-primary mx-2">
         Pretraži

@@ -63,6 +63,9 @@ const ViewGuests = () => {
     if (guestsDataName.length > 0) {
       setFound(true);
       setFoundMsg("Sistem je našao goste po zadatoj vrednosti.");
+    } else {
+      setErrorMessage("Sistem ne može da goste sobe po zadatoj vrednosti.");
+      setSuccessful(true);
     }
   };
 

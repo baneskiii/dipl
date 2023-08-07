@@ -2,6 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion as m } from "framer-motion";
+import Footer from "./Footer";
+import { Container, Header } from "rsuite";
 
 function Content() {
   return (
@@ -14,6 +16,7 @@ function Content() {
         <Navbar />
       </m.div>
       <Outlet />
+      <Footer />
     </div>
   );
 }

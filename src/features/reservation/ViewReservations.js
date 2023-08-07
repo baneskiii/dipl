@@ -13,6 +13,8 @@ const ViewReservations = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successful, setSuccessful] = useState(false);
   const [reservations, setReservations] = useState([]);
+  const [found, setFound] = useState(false);
+  const [foundMsg, setFoundMsg] = useState("");
 
   const { data: reservationsData } = useGetReservationsQuery();
 
@@ -30,6 +32,8 @@ const ViewReservations = () => {
     setDateFrom(e.target.value);
     setErrorMessage("");
     setSuccessful(false);
+    setFound(false);
+    setFoundMsg("");
   };
 
   const refresh = () => {
@@ -37,6 +41,8 @@ const ViewReservations = () => {
     setDateFrom("");
     setErrorMessage("");
     setSuccessful(false);
+    setFound(false);
+    setFoundMsg("");
   };
 
   const onSubmit = () => {
@@ -45,6 +51,15 @@ const ViewReservations = () => {
       setReservations(reservationsDataDateFrom);
     } else {
       setErrorMessage(errorMessage);
+      setSuccessful(true);
+    }
+    if (reservationsDataDateFrom.length > 0) {
+      setFound(true);
+      setFoundMsg("Sistem je našao rezervacije po zadatoj vrednosti.");
+    } else {
+      setErrorMessage(
+        "Sistem ne može da nađe rezervacije po zadatoj vrednosti."
+      );
       setSuccessful(true);
     }
   };
@@ -59,6 +74,8 @@ const ViewReservations = () => {
         refresh={refresh}
         onSubmit={onSubmit}
         _errorMessage={errorMessage}
+        found={found}
+        foundMsg={foundMsg}
       ></ReservationFilter>
       <m.div
         initial={{ x: "100%", opacity: 0 }}
