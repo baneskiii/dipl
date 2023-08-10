@@ -109,7 +109,9 @@ const ViewRoom = () => {
       .catch((error) => {
         if (error.status === 500) {
           setSuccessful(true);
-          setErrMsg("Sistem ne može da obriše sobu. Soba ima rezervaciju ili ocenu sobe.");
+          setErrMsg(
+            "Sistem ne može da obriše sobu. Soba ima rezervaciju ili ocenu sobe."
+          );
         }
       });
     setDeleted(true);
@@ -151,11 +153,6 @@ const ViewRoom = () => {
     if (canSave) {
       try {
         addRoomRating(roomRating);
-        setRoomRating({
-          rating: "",
-          guestDto: {},
-          roomDto: {},
-        });
         setErrMsgRating("");
         setOk(true);
         setOkMsg("Sistem je zapamtio ocenu sobe.");
@@ -200,10 +197,7 @@ const ViewRoom = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-        <p
-            className="text-success"
-            aria-live="assertive"
-          >
+          <p className="text-success" aria-live="assertive">
             Sistem je učitao sobu.
           </p>
           <h3 className="text-center m-4">Pregled sobe</h3>

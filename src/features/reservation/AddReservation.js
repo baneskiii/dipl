@@ -93,12 +93,6 @@ const AddReservation = () => {
     if (canSave) {
       try {
         addReservation(reservation);
-        setReservation({
-          dateFrom: "",
-          dateTo: "",
-          guestDto: {},
-          reservationItemsDtos: [],
-        });
         setErrorMessage("");
         setOk(true);
         setOkMsg("Sistem je zapamtio rezervaciju.");

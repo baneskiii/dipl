@@ -28,7 +28,7 @@ export const validateReservation = ({
   ) {
     result = {
       canSave: false,
-      errorMessage: "Sistem ne može da zapamti rezervaciju. Datum od i datum do moraju biti u navedenom formatu.",
+      errorMessage: "Sistem ne može da zapamti rezervaciju.",
     };
     return result;
   }
@@ -63,7 +63,8 @@ export const validateReservationFilter = (dateFrom) => {
   if (!/^\d{2}-\d{2}-\d{4}$/.test(dateFrom)) {
     result = {
       can: false,
-      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od mora biti u navedenom formatu.",
+      errorMessage:
+        "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od mora biti u navedenom formatu.",
     };
     return result;
   }
