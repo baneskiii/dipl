@@ -200,6 +200,12 @@ const ViewRoom = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        <p
+            className="text-success"
+            aria-live="assertive"
+          >
+            Sistem je učitao sobu.
+          </p>
           <h3 className="text-center m-4">Pregled sobe</h3>
           <RoomForm
             id={id}

@@ -55,11 +55,6 @@ const AddRoom = () => {
     if (canSave) {
       try {
         addRoom(room);
-        setRoom({
-          floor: "",
-          status: "",
-          roomTypeDto: {},
-        });
         setErrMsg("");
         setOk(true);
         setOkMsg("Sistem je zapamtio sobu.");
