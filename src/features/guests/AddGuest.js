@@ -65,12 +65,6 @@ const AddGuest = () => {
     if (canSave) {
       try {
         addGuest(guest);
-        setGuest({
-          firstName: "",
-          lastName: "",
-          birthdate: "",
-          cityDto: {},
-        });
         setErrMsg("");
         setOk(true);
         setOkMsg("Sistem je zapamtio gosta.");

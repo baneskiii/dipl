@@ -117,7 +117,7 @@ const Login = () => {
                   type="text"
                   className="form-control"
                   id="username"
-                  placeholder="Your username"
+                  placeholder="Unesite korisničko ime"
                   ref={userRef}
                   autoComplete="off"
                   onChange={handleUsernameInput}
@@ -141,7 +141,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="Your password"
+                  placeholder="Unesite lozinku"
                   className="form-control"
                   id="password"
                   onChange={handlePasswordInput}

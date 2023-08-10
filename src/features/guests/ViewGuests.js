@@ -64,7 +64,7 @@ const ViewGuests = () => {
       setFound(true);
       setFoundMsg("Sistem je našao goste po zadatoj vrednosti.");
     } else {
-      setErrorMessage("Sistem ne može da goste sobe po zadatoj vrednosti.");
+      setErrorMessage("Sistem ne može da nađe goste po zadatoj vrednosti.");
       setSuccessful(true);
     }
   };

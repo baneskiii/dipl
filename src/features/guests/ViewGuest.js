@@ -129,6 +129,12 @@ const ViewGuest = () => {
     >
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-4 shadow">
+          <p
+            className="text-success"
+            aria-live="assertive"
+          >
+            Sistem je učitao gosta.
+          </p>
           <h3 className="text-center m-4">Pregled gosta</h3>
           <GuestForm
             id={id}
