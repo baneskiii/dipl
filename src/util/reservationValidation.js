@@ -28,7 +28,7 @@ export const validateReservation = ({
   ) {
     result = {
       canSave: false,
-      errorMessage: "Sistem ne može da zapamti rezervaciju. Datum od i datum do moraju biti u navedenom formatu.",
+      errorMessage: "Sistem ne može da zapamti rezervaciju.",
     };
     return result;
   }

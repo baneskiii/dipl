@@ -232,6 +232,9 @@ const ViewReservation = () => {
     >
       <div className="row">
         <div className="col-md-8 offset-md-2 border rounded p-4 mt-2 shadow">
+          <p className="text-success" aria-live="assertive">
+            Sistem je učitao rezervaciju.
+          </p>
           <h4 className="text-center m-4">Pregled rezervacije</h4>
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
