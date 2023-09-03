@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetGuestsQuery } from "../guests/guestsApiSlice";
-import { useGetAvailableRoomsQuery } from "../rooms/roomsApiSlice";
+import { useGetRoomsQuery } from "../rooms/roomsApiSlice";
 import {
   validateReservation,
   validateReservationItem,
@@ -41,7 +41,7 @@ const AddReservation = () => {
 
   const { data: guests, isSuccess: isSuccessGuests } = useGetGuestsQuery();
   const { data: rooms, isSuccess: isSuccessRooms } =
-    useGetAvailableRoomsQuery();
+    useGetRoomsQuery();
   const [addReservation] = useAddReservationMutation();
 
   useEffect(() => {

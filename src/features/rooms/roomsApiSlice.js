@@ -23,11 +23,6 @@ export const roomsApiSlice = apiSlice.injectEndpoints({
       query: ({ id }) => `/rooms/${id}`,
       providesTags: ["Rooms"],
     }),
-    getAvailableRooms: builder.query({
-      query: () => "/rooms",
-      transformResponse: (res) => res.filter((room) => room.status == false),
-      providesTags: ["Rooms"],
-    }),
     deleteRoom: builder.mutation({
       query: ({ id }) => ({
         url: `/rooms/${id}`,
@@ -52,7 +47,6 @@ export const {
   useGetRoomsQuery,
   useGetRoomsByFloorQuery,
   useGetRoomQuery,
-  useGetAvailableRoomsQuery,
   useDeleteRoomMutation,
   useUpdateRoomMutation,
 } = roomsApiSlice;

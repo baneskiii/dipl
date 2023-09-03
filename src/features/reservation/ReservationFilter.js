@@ -22,6 +22,19 @@ export function ReservationFilter(props) {
         />
       </div>
       <div className="mb-3">
+        <label htmlFor="dateTo" className="form-label">
+          Datum do (npr. 05-06-2023)
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          name="dateTo"
+          value={props.dateTo}
+          onChange={props.onDateToChange}
+          required
+        />
+      </div>
+      <div className="mb-3">
         {props.successful ? (
           <p className="text-danger" aria-live="assertive">
             {props._errorMessage}

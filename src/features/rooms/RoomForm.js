@@ -27,19 +27,7 @@ function RoomForm(props) {
           disabled={disabled}
         />
       </div>
-      <div className="mb-3 col-md-3 form-check">
-        <input
-          type="checkbox"
-          checked={props.status}
-          onChange={props.onStatusChange}
-          className="form-check-input"
-          id="exampleCheck1"
-          disabled={disabled}
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Zauzeta
-        </label>
-      </div>
+      
       <div className="input-group mb-3">
         <label className="input-group-text" htmlFor="inputGroupSelect01">
           Vrsta sobe (površina, broj kreveta)

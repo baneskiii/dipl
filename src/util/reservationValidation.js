@@ -55,15 +55,29 @@ export const validateReservationItem = ({ guestDto, roomDto }) => {
   return result;
 };
 
-export const validateReservationFilter = (dateFrom) => {
+export const validateReservationFilter = (dateFrom, dateTo) => {
   let result = {
     can: true,
     errorMessage: "",
   };
-  if (!/^\d{2}-\d{2}-\d{4}$/.test(dateFrom)) {
+  if(dateFrom == undefined || dateTo == undefined){
     result = {
       can: false,
-      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od mora biti u navedenom formatu.",
+      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od i datum moraju biti uneti.",
+    };
+    return result;
+  }
+  if(dateFrom.length == 0 || dateTo.length == 0){
+    result = {
+      can: false,
+      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od i datum moraju biti uneti.",
+    };
+    return result;
+  }
+  if (!/^\d{2}-\d{2}-\d{4}$/.test(dateFrom) && !/^\d{2}-\d{2}-\d{4}$/.test(dateTo)) {
+    result = {
+      can: false,
+      errorMessage: "Sistem ne može da nađe rezervacije po zadatoj vrednosti. Datum od i datum do moraju biti u navedenom formatu.",
     };
     return result;
   }

@@ -9,10 +9,9 @@ import { motion as m } from "framer-motion";
 const AddRoom = () => {
   const [room, setRoom] = useState({
     floor: "",
-    status: false,
     roomTypeDto: {},
   });
-  const { floor, status } = room;
+  const { floor } = room;
   const [successful, setSuccessful] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [roomTypeId, setRoomTypeId] = useState("");
@@ -31,11 +30,6 @@ const AddRoom = () => {
 
   const onFloorChange = (e) => {
     setRoom({ ...room, floor: e.target.value });
-    setSuccessful(false);
-    setErrMsg("");
-  };
-  const onStatusChange = () => {
-    setRoom({ ...room, status: !status });
     setSuccessful(false);
     setErrMsg("");
   };
@@ -92,13 +86,11 @@ const AddRoom = () => {
           <h3 className="text-center m-4">Dodavanje nove sobe</h3>
           <RoomForm
             floor={floor}
-            status={status}
             successful={successful}
             errMsg={errMsg}
             roomTypeId={roomTypeId}
             floorRef={floorRef}
             onFloorChange={onFloorChange}
-            onStatusChange={onStatusChange}
             onRoomTypeChange={onRoomTypeChange}
             onSubmit={onSubmit}
             roomTypesOptions={roomTypesOptions}

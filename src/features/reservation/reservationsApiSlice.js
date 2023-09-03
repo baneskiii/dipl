@@ -15,8 +15,8 @@ export const reservationsApiSlice = apiSlice.injectEndpoints({
       query: () => "/reservations",
       providesTags: ["Reservations"],
     }),
-    getReservationsByDateFrom: builder.query({
-      query: ({ dateFrom }) => `/reservations/byDateFrom?dateFrom=${dateFrom}`,
+    getReservationsByDate: builder.query({
+      query: ({ dateFrom, dateTo }) => `/reservations/byDate?dateFrom=${dateFrom}&dateTo=${dateTo}`,
       providesTags: ["Reservations"],
     }),
     getReservation: builder.query({
@@ -44,7 +44,7 @@ export const reservationsApiSlice = apiSlice.injectEndpoints({
 export const {
   useAddReservationMutation,
   useGetReservationsQuery,
-  useGetReservationsByDateFromQuery,
+  useGetReservationsByDateQuery,
   useGetReservationQuery,
   useDeleteReservationMutation,
   useUpdateReservationMutation,

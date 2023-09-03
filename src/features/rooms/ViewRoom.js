@@ -18,7 +18,7 @@ import { motion as m } from "framer-motion";
 const ViewRoom = () => {
   const [room, setRoom] = useState({});
   const { id } = useParams();
-  const { floor, status, roomTypeDto } = room;
+  const { floor, roomTypeDto } = room;
   const [successful, setSuccessful] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [roomTypeId, setRoomTypeId] = useState("");
@@ -72,11 +72,6 @@ const ViewRoom = () => {
     setSuccessful(false);
     setErrMsg("");
   };
-  const onStatusChange = () => {
-    setRoom({ ...room, status: !status });
-    setSuccessful(false);
-    setErrMsg("");
-  };
   const onRoomTypeChange = (e) => {
     const selectedRoomType = roomTypes.find(
       (roomType) => roomType.id == e.target.value
@@ -126,7 +121,6 @@ const ViewRoom = () => {
         updateRoom(room);
         setRoom({
           floor: "",
-          status: "",
           roomTypeDto: {},
         });
         setErrMsg("");
@@ -210,13 +204,11 @@ const ViewRoom = () => {
           <RoomForm
             id={id}
             floor={floor}
-            status={status}
             successful={successful}
             errMsg={errMsg}
             roomTypeId={room?.roomTypeDto?.id}
             floorRef={floorRef}
             onFloorChange={onFloorChange}
-            onStatusChange={onStatusChange}
             onRoomTypeChange={onRoomTypeChange}
             onSubmit={onSubmit}
             roomTypesOptions={roomTypesOptions}
