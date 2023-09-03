@@ -63,6 +63,7 @@ const ViewReservations = () => {
     } else {
       setErrorMessage(errorMessage);
       setSuccessful(true);
+      return;
     }
     if (reservationsDataDate == undefined) {
       setErrorMessage(

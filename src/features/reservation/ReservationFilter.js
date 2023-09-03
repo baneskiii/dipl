@@ -37,7 +37,7 @@ export function ReservationFilter(props) {
       <div className="mb-3">
         {props.successful ? (
           <p className="text-danger" aria-live="assertive">
-            {props._errorMessage}
+            {props.errorMessage}
           </p>
         ) : (
           <></>
