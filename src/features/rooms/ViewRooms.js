@@ -58,7 +58,7 @@ const ViewRooms = () => {
         setSuccessful(true);
       }
     } else {
-      setErrorMessage("Sprat mora biti broj.");
+      setErrorMessage("Sistem ne može da nađe sobe po zadatoj vrednosti.");
       setSuccessful(true);
     }
   };
